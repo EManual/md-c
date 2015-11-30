@@ -1,28 +1,28 @@
 函数原型：FILE *tmpfile(void);
-头文件：#include<stdio.h>
+头文件：include<stdio.h>
 是否是标准函数：是
 函数功能：创建一个临时文件。该文件以w+b（二进制读写）方式打开，当该文件被关闭时，该文件会被自动删除。
 返回值：返回指向临时文件的指针，如果文件打不开则返回EOF。
 例程如下 创建一个临时文件。
-[code=java]
-#include <stdio.h> 
-#include <process.h> 
-#[Keywords]int #main(void) 
+```  
+include <stdio.h> 
+include <process.h> 
+int main(void) 
 { 
-   #FILE *tempfp;
-   #tempfp = tmpfile();
-   #[Keywords]if #(tempfp) 
-      #printf(#[Fields]"Temporary file be created!!\n"#);
-   #[Keywords]else #
-   #{
-      #printf(#[Fields]"Unable to create the temporary file!!\n"#);
-      #exit(1);
-   #} 
-    #sleep(20);
-   #[Keywords]return #0; 
-#}
-[/code]
-[color=blue]例程说明：
+   FILE *tempfp;
+   tempfp = tmpfile();
+   if (tempfp) 
+      printf("Temporary file be created!!\n");
+   else 
+   {
+      printf("Unable to create the temporary file!!\n");
+      exit(1);
+   } 
+    sleep(20);
+   return 0; 
+}
+```
+#### 例程说明：
 （1）首先应用tmpfile函数创建一个临时文件，并将文件指针赋值给FILE型变量tempfp。
 （2）如果创建临时文件成功，则在终端显示提示：Temporary file be created!!
 （3）如果创建不成功，则显示提示：Unable to create the temporary file!!

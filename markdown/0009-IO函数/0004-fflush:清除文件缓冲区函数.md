@@ -1,66 +1,66 @@
 函数原型：int fflush(FILE *fp);
-头文件：#include<stdio.h>
+头文件：include<stdio.h>
 是否是标准函数：是
 函数功能：清除一个流，即清除文件缓冲区，当文件以写方式打开时，将缓冲区内容写入文件。也就是说，对于ANSI C规定的是缓冲文件系统，函数fflush用于将缓冲区的内容输出到文件中去。
 返回值：如果成功刷新，fflush返回0。指定的流没有缓冲区或者只读打开时也返回0值。返回EOF指出一个错误。
 例程如下：第一种方式读写文件 
-[code=java]
-#include <string.h>
-#include <stdio.h>
-#include <conio.h>
-#include <io.h>
-#[Keywords]int #main(void)
+```  
+include <string.h>
+include <stdio.h>
+include <conio.h>
+include <io.h>
+int main(void)
 {
-   #FILE *stream1,*stream2;
-   #[Keywords]char #test[20]=#[Fields]"This is a test"#;
-   #[Keywords]char #res[20];
-   #/*以写的方式打开文件test.txt*/
-   #stream1 = fopen(#[Fields]"test.txt"#, #[Fields]"w"#);
-   #/*向文件写入字符串*/
-   #fwrite(test,15,1,stream1);
-   #/*以读的方式打开文件test.txt*/
-   #stream2 = fopen(#[Fields]"test.txt"#, #[Fields]"r"#);
-   #/*将文件内容读入缓冲区*/
- #[Keywords]if#(fread(res,15,1,stream2))
-        #printf(#[Fields]"%s"#,res);
-  #[Keywords] else#
-        #printf(#[Fields]"Read error!\n"#);
-   #fclose(stream1);
-   #fclose(stream2);
-   #getch();
-   #[Keywords]return #0;
-#}
-[/code]
+   FILE *stream1,*stream2;
+   char test[20]="This is a test";
+   char res[20];
+   /*以写的方式打开文件test.txt*/
+   stream1 = fopen("test.txt", "w");
+   /*向文件写入字符串*/
+   fwrite(test,15,1,stream1);
+   /*以读的方式打开文件test.txt*/
+   stream2 = fopen("test.txt", "r");
+   /*将文件内容读入缓冲区*/
+ if(fread(res,15,1,stream2))
+        printf("%s",res);
+   else
+        printf("Read error!\n");
+   fclose(stream1);
+   fclose(stream2);
+   getch();
+   return 0;
+}
+```
 例程如下：：第二种方式读写文件
-[code=java]
-#include <string.h>
-#include <stdio.h>
-#include <conio.h>
-#include <io.h>
-#[Keywords]int #main(void)
+```  
+include <string.h>
+include <stdio.h>
+include <conio.h>
+include <io.h>
+int main(void)
 {
-   #FILE *stream1,*stream2;
-   #[Keywords]char #test[20]=#[Fields]"This is a test"#;
-   #[Keywords]char #res[20];
-   #/*以写的方式打开文件test.txt*/
-   #stream1 = fopen(#[Fields]"test.txt"#, #[Fields]"w"#);
-   #/*向文件写入字符串*/
-   #fwrite(test,15,1,stream1);
-	#/*将缓冲区的内容写入文件*/
-   #fflush(stream1);
-   #/*以读的方式打开文件test.txt*/
-   #stream2 = fopen(#[Fields]"test.txt"#, #[Fields]"r"#);
-   #/*将文件内容读入缓冲区*/
- #[Keywords]if#(fread(res,15,1,stream2))
-        #printf(#[Fields]"%s"#,res);
-  #[Keywords] else#
-        #printf(#[Fields]"Read error!\n"#);
-   #fclose(stream1);
-   #fclose(stream2);
-   #getch();
-   #[Keywords]return #0;
-#}
-[/code]
+   FILE *stream1,*stream2;
+   char test[20]="This is a test";
+   char res[20];
+   /*以写的方式打开文件test.txt*/
+   stream1 = fopen("test.txt", "w");
+   /*向文件写入字符串*/
+   fwrite(test,15,1,stream1);
+	/*将缓冲区的内容写入文件*/
+   fflush(stream1);
+   /*以读的方式打开文件test.txt*/
+   stream2 = fopen("test.txt", "r");
+   /*将文件内容读入缓冲区*/
+ if(fread(res,15,1,stream2))
+        printf("%s",res);
+   else
+        printf("Read error!\n");
+   fclose(stream1);
+   fclose(stream2);
+   getch();
+   return 0;
+}
+```
 例程说明：
 例程如下：中定义了两个文件指针stream1和stream2。
 （1）首先以写的方式打开文件test.txt，用指针stream1指向该文件，并向文件中写入字符串"This is a test"。
