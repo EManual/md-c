@@ -1,6 +1,9 @@
 可变参数表<stdarg.h>中的宏是用来定义参数可变的函数的。在C语言中，有些库函数或者用户自定义的函数的参数是可变的，常用省略号“……”（例如库函数中的printf），定义这样的函数就要使用到<stdarg.h>中的宏。
+
 #### 1、va_list
+
 用于保存宏va_start，va_arg以及va_end所需信息的数据类型。
+
 #### 2、<stdarg.h>中还定义了三个宏
 ```  
 void va_start(va_list ap, parmN);

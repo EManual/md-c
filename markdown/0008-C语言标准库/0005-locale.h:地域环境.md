@@ -1,5 +1,7 @@
 在<locale.h>中，定义了7个常量，一个结构，2个函数。
+
 #### 1、常量的定义
+
 LC_ALL：传递给setlocale的第一个参数，指定要更改该locale的哪个方面。
 LC_COLLATE：strcoll和strxfrm的行为。
 LC_CTYPE：字符处理函数。
@@ -9,9 +11,10 @@ LC_TIME：strftime的行为。
 以上扩展成具有唯一取值的整型常数表达式，可作为setlocale的第一个参数。
 NULL：由实现环境定义的空指针。
 #### 2、struct lconv结构
+
 该结构用于存储和表示当前locale的设置。其结构定义如下：
 ```  
-struct lconv 
+struct lconv
 {
     char*decimal_point ;
     char*thousands_sep ;
@@ -33,7 +36,9 @@ struct lconv
     char n_sign_posn ;
 };
 ```
+
 #### 3、函数
+
 ```  
 struct Iconv *localeconv(void);
 ```

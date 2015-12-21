@@ -27,8 +27,8 @@ raise函数的作用是向正在执行的程序发送一个信号，从而使得
 下面通过例子理解函数signal和raise。
 例程9-2 signall和raise函数演示
 ```  
-include <stdio.h> 
-include <signal.h> 
+include <stdio.h>
+include <signal.h>
 void Print1();
 void Print2();
 int main()
