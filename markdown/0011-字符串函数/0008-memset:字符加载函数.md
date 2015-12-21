@@ -5,21 +5,27 @@
 返回值：s的值
 例程如下：应用memset函数替换字符串中的字符。
 ```  
-include <string.h> 
-include <stdio.h> 
-int main(void) 
-{ 
+include <string.h>
+include <stdio.h>
+int main(void)
+{
    char *str="AAAAAAAAAAAAAAAAAA";
    printf("The original string is:    %s\n",str);
    memset(str,'B',9);
    printf("The string after memset is:%s\n",str);
 }
 ```
+
 #### 例程说明：
+
 （1）首先初始化字符串“AAAAAAAAAAAAAAAAAA”， 将首地址赋值给str。
+
 （2）显示该字符串。
+
 （3）利用函数memset将字符串str的前9个字符替换为’B’。
+
 （4）显示替换后的字符串。
+
 本例程的运行结果为：
 ```  
 The original string is:    AAAAAAAAAAAAAAAAAA

@@ -5,9 +5,9 @@
 返回值：根据s1所指向的对象的大于、等于、小于s2所指向的对象，函数memcmp分别返回大于、等于、小于0的值。
 例程如下：比较两个字符串。
 ```  
-include <stdio.h> 
-include <string.h> 
-int main(void) 
+include <stdio.h>
+include <string.h>
+int main(void)
 {
     char *str1="ABCDEF";
     char *str2="ABCDEf";
@@ -28,10 +28,15 @@ int main(void)
          printf("%s=%s\n",str1,str2);
 }
 ```
+
 #### 例程说明：
+
 （1）首先初始化两个字符串“ABCDEF”和“ABCDEf”。
+
 （2）然后应用函数memcmp将这两个字符串按照不同的字符个数进行比较，将返回的比较结果复制给变量s1和s2。
+
 （3）显示比较结果。
+
 本例程的运行结果为：
 ```  
 The comparison of 6 character
