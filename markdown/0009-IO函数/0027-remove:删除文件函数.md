@@ -14,8 +14,11 @@ void main()
       printf( "Deleted test.txt \n" );
 }
 ```
+
 #### 例程说明：
+
 （1）首先要在当前文件夹下建立文件test.txt。
+
 （2）再利用remove函数删除该文件。若删除成功，则在终端显示字符串"Deleted test.txt \n"，否则显示字符串"Could not delete test.txt!!: No such file or directory"。
 注意：前面已经讲过perror函数是按照一定格式要求向终端输出错误信息，因此，若删除文件成功，程序运行的结果为：
 ```  

@@ -33,8 +33,13 @@ void main( void )
    fclose( fp );
 }
 ```
+
 #### 例程说明：
+
 （1）首先，程序以只读方式打开名为test.txt的文件。在这里，test.txt文件中已存入字符串This is a test for testing the function of fsetpos.
+
 （2）将pos设置为10。应用fsetpos函数将文件指针fp按照pos指定的位置在文件中定位。这样文件指针fp指向字符串中test的字母t。
+
 （3）再从新定位的文件指针开始读取16个字符到buffer缓冲区，也就是说读取字符串"test for testing"到缓冲区buffer。
+
 （4）最后显示结果：16 bytes at byte 10: test for testing 。

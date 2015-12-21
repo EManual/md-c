@@ -5,20 +5,22 @@
 返回值：无。
 例程如下 应用perror函数显示错误信息。
 ```  
-include <stdio.h> 
-int main(void) 
-{ 
+include <stdio.h>
+int main(void)
+{
    FILE *fp;
    /*企图以读的方式打开文件test.txt*/
    fp = fopen("test.txt", "r");
    if (fp==NULL)
     /*该文件不存在，在终端显示错误信息*/
       perror("Unable to open file for reading");
-   return 0; 
+   return 0;
 }
 ```
+
 #### 例程说明：
 （1）首先程序企图以读的方式打开文件test.txt，但在这里该文件并不存在。
+
 （2）然后，利用函数perror在终端显示错误信息"Unable to open file for reading: No such file or directory"。
 具体的运行结果格式如下：
 ```  

@@ -44,10 +44,15 @@ void main( void )
    }
 }
 ```
+
 #### 例程说明：
+
 （1）首先，程序以读写的方式打开打开名为test.txt的文件。
+
 （2）然后，应用fprintf函数按照规定格式将字符串"The fseek begins here: ""This is the file 'test.txt'.\n"写入文件。
+
 （3）再将文件指针定位到离文件头23个字节处，即将文件指针fp定位在字符串"This is the file 'test.txt'.\n"的开头。
+
 （4）然后，应用fgets函数从fp指向的文件中读取字符串，并显示在屏幕上。
 本程序的运行结果为在屏幕上显示出以下字符串：
 ```  

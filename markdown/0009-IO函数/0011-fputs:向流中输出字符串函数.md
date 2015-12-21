@@ -5,9 +5,9 @@
 返回值：成功返回0，否则返回非0。
 例程如下 应用fputs函数向文件中输出字符串。
 ```  
-include <stdio.h> 
-int main(void) 
-{ 
+include <stdio.h>
+int main(void)
+{
    FILE *fp;
    char str[]="This is a test!";
    /*以写的方式打开名为test.txt的文件*/
@@ -18,6 +18,9 @@ int main(void)
    return 0;
 }
 ```
+
 #### 例程说明：
+
 （1）首先用字符数组str存储一个字符串，并以写的方式打开名为test.txt的文件。
+
 （2）再用fputs函数将该字符串输出到test.txt的文件中。

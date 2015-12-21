@@ -5,9 +5,9 @@
 返回值：返回一个指向新文件的指针，即指向filename文件的指针。若出错，则返回NULL。
 例程如下 关闭一个终端，并将数据流替换至一个新文件中。
 ```  
-include <stdio.h> 
-int main(void) 
-{ 
+include <stdio.h>
+int main(void)
+{
     FILE *Nfp;
    /* 替换标准输出文件上的数据流到新文件test.txt */
    if (Nfp=freopen("test.txt", "w", stdout)
@@ -20,11 +20,16 @@ int main(void)
    fclose(stdout);
    /*关闭新生成的文件*/
    fclose(Nfp);
-   return 0; 
+   return 0;
 }
 ```
+
 #### 例程说明：
+
 （1）首先，程序以写的方式打开名为test.txt的文件，将标准输出文件上的数据流"This will go into a file."替换到新生成的文件test.txt中。freopen函数返回一个指向新文件的指针，即指向文件test.txt的指针，并将它存放到Nfp中。
+
 （2）然后关闭标准输出文件，fclose(stdout)。
+
 （3）最后关闭新生成的文件fclose(Nfp)。
+
 （4）本程序的执行结果是在当前目录下生成一个文件test.txt，并将原终端的数据流"This will go into a file."重新写入test.txt文件中。

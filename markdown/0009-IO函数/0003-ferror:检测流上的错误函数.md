@@ -5,28 +5,30 @@
 返回值：未出错返回值为0，否则返回非0，表示有错。
 例程如下：应用ferror函数检查流上的错误。
 ```  
-include <stdio.h> 
-int main(void) 
-{ 
+include <stdio.h>
+int main(void)
+{
    FILE *fp;
-   char ch; 
+   char ch;
    /* 以写的方式打开一个文件名为test.txt的文件 */
    fp = fopen("test.txt", "w");
    /* 错误地从fp所指定的文件中读取一个字符，并打印它*/
    ch = fgetc(fp);
    printf("%c\n",ch);
-   if (ferror(fp)) 
+   if (ferror(fp))
    {
       /* 如果此操作错误，就发布错误信息*/
       printf("Error reading from test.txt !\n");
       /*复位错误标志*/
       clearerr(fp);
-   } 
+   }
     /*关闭文件*/
-fclose(fp); 
-   return 0; 
+fclose(fp);
+   return 0;
 }
 ```
+
 例程说明：
 （1）首先以只写的方式打开一个文件名为”test.txt”的文件。这样，该文件就只能写而不能读了。程序企图用fgetc函数从fp所指的文件中读出一个字符，这样就是非法操作，也就是说在用fgetc函数进行读取字符时出错了，因此文件产生错误标志。
+
 （2）再用ferror函数来检测输入输出函数进行文件读写操作时是否出错，结果发现有错，因此函数返回一个非0整型数，并提示出错信息。

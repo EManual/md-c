@@ -5,15 +5,17 @@
 返回值：返回所读的字符，若文件结束或出错返回-1。
 例程如下 应用getchar函数从标准输入设备读取下一个字符。
 ```  
-include <stdio.h> 
-int main(void) 
-{ 
-   int c; 
+include <stdio.h>
+int main(void)
+{
+   int c;
    /* 从键盘上接收字符并显示，直到键入换行符为止 */
-   while ((c = getchar()) != '\n') 
+   while ((c = getchar()) != '\n')
       printf("%c", c);
-   return 0; 
+   return 0;
 }
 ```
+
 #### 例程说明：
+
 程序从键盘上接收字符并显示，当接收到换行符'\n'时，程序结束。
