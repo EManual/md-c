@@ -6,9 +6,9 @@
 例程如下： 应用isalnum检查字符属性。
 ```  
 include <stdio.h>
-include <ctype.h> 
-int main( void ) 
-{ 
+include <ctype.h>
+int main( void )
+{
    char c,ch;
    scanf("%c",&c);
    ch=getchar();
@@ -23,9 +23,13 @@ int main( void )
    return 1;
 }
 ```
+
 #### 例程说明：
+
 （1）首先，程序声明了两个字符型变量，用以接收来自终端的字符。
+
 （2）当用户输入的字符不是'e'且是字母或数字字符时，就在屏幕上显示"This is a alpha or a number"提示信息。当用户输入的字符不是'e'且不是字母或数字字符时，就在屏幕上显示"This is a particulate character"提示信息。
+
 （3）当用户输入字符'e'时，程序退出。
 注意：本例程中，scanf函数用以接收欲判断的字符，getchar函数用以接收回车换行符。本例程的运行结果为：
 ```  

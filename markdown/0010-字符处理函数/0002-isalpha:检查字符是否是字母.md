@@ -6,9 +6,9 @@
 例程如下：应用isalpha检查字符属性。
 ```  
 include <stdio.h>
-include <ctype.h> 
-int main( void ) 
-{ 
+include <ctype.h>
+int main( void )
+{
    char c,ch;
    scanf("%c",&c);
    ch=getchar();
@@ -23,7 +23,9 @@ int main( void )
    return 1;
 }
 ```
+
 #### 例程说明：
+
 本例程但只判断输入的字符是否是字母，如果是字母，则在屏幕上显示"This is a alpha "提示信息，否则显示"This is not a alpha"提示信息。
 本例程的运行结果为：
 ```  

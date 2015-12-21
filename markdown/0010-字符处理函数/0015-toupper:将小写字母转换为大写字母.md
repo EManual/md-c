@@ -20,7 +20,9 @@ int main(void)
     return 0;
 }
 ```
+
 #### 例程说明：
+
 本例程利用toupper函数将字符串中的小写字母转换为大写字母，并输出到终端。本例程的运行结果为：
 ```  
 This Is A Test!

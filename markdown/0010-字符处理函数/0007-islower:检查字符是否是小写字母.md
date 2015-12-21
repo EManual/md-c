@@ -6,7 +6,7 @@
 例程如下： 应用islower函数统计字符串中的小写字母个数。
 ```  
 include <stdio.h>
-include <ctype.h> 
+include <ctype.h>
 int main(void)
 {
     char ch;
@@ -21,7 +21,9 @@ int main(void)
     return 0;
 }
 ```
+
 #### 例程说明：
+
 本例程先输入一串任意的字符，然后应用islower函数统计字符串中的小写字母个数。最后，在屏幕上显示出小写字母的个数。本例程的运行结果是：
 ```  
 djcvGGJH4623^Z
